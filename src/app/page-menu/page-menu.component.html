@@ -1,0 +1,30 @@
+<section class="page__menu menu-section" id="menu">
+	<div class="menu-section__container container">
+		<h2 class="menu-section__title title">Выберите свою любимую пиццу</h2>
+		<ng-template #loader>
+			<p class="menu-section__loader">
+				Загрузка меню...
+			</p>
+		</ng-template>
+		<div class="menu-section__items" *ngIf="(this.items.length); else loader">
+			<article class="menu-section__item item" *ngFor="let item of items">
+				<div class="item__image" (click)="showItemImage(item.image)">
+					<img [src]="item.image" alt="Item">
+				</div>
+				<h4 class="item__title">{{ item.title }}</h4>
+				<div class="item__text">
+					<p>
+						{{ item.text }}
+					</p>
+				</div>
+				<a href="" class="item__button button">В корзину</a>
+			</article>
+		</div>
+	</div>
+</section>
+
+<div class="modal" [ngClass]="{'show': showImage}" (click)="closeImage()">
+  <div class="modal-content">
+    <img [src]="modalImage" alt="modal image">
+  </div>
+</div>

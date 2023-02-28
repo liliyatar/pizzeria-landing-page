@@ -1,0 +1,73 @@
+@import '../../assets/scss/mixins';
+
+.page__footer {
+}
+.footer {
+}
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: rem(105);
+	@media (max-width: em(999.98)) {
+		flex-direction: column;
+		gap: rem(15);
+	}
+}
+.container {
+}
+.footer__info {
+	max-width: rem(385);
+}
+.footer__title {
+	font-size: rem(32);
+	line-height: 45px;
+}
+.footer__text {
+	margin-top: rem(65);
+	font-size: rem(16);
+	line-height: 24px;
+	color: #b99150;
+}
+.footer__order {
+}
+.footer__image {
+	transition: transform 0.8s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			transform: translateY(rem(-30));
+		}
+	}
+	@media (max-width: em(599.98)) {
+		transform: scale(0.7)
+	}
+}
+.order {
+}
+.order__form {
+}
+.form {
+	display: grid;
+	gap: rem(24);
+}
+.form__item {
+}
+.form__input {
+	font-size: rem(18);
+	width: 100%;
+	height: rem(58);
+	color: #cba86e;
+	background-color: transparent;
+	border: 1px solid #cba86e;
+	padding: rem(0) rem(22);
+}
+.form__input::placeholder {
+	color: #cba86e;
+}
+
+.form__input:focus::placeholder {
+	color: #cba86e;
+}
+.form__button {
+}

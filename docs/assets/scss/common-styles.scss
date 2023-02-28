@@ -1,0 +1,36 @@
+.button {
+	display: inline-block;
+	padding: rem(23) rem(52) rem(22) rem(54);
+	background-color: #ffaf18;
+	color: #382400;
+	font-weight: 700;
+	transition: background-color 0.8s ease 0s;
+
+	@media (max-width: em(1199.98)) {
+		display: flex;
+		justify-content: center;
+		max-width: rem(300);
+		margin: 0 auto;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #ffce73;
+		}
+	}
+
+	&:disabled {
+		background-color: #ffe8bc;
+		cursor: not-allowed;
+	}
+}
+
+.title {
+	font-family: 'Muller';
+	font-weight: 800;
+	line-height: 55px;
+	color: #a46b00;
+	& span {
+		color: #f6ad25;
+	}
+}

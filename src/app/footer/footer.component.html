@@ -1,0 +1,62 @@
+<footer class="page__footer footer">
+  <div class="footer__container container">
+    <div class="footer__info">
+      <div class="footer__title title"><span>Хватит думать!</span> Доставим заказ за 30 минут!</div>
+      <div class="footer__text">
+        <p>
+          Мы  гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+        </p>
+      </div>
+    </div>
+    <div class="footer__order order">
+			<form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="order__form form">
+          <div class="form__item">
+            <input
+              id="name"
+              type="text"
+              placeholder="Ваше имя"
+              class="form__input"
+              formControlName="name"
+              (keydown)="onKeyDown($event)"
+              autocomplete="off"
+              required
+            >
+					</div>
+					<div class="form__item">
+            <input
+              id="name"
+              type="text"
+              placeholder="Адрес доставки"
+              class="form__input"
+              formControlName="address"
+              autocomplete="off"
+              required
+            >
+					</div>
+          <div class="form__item">
+            <input
+              id="name"
+              type="number"
+              placeholder="Телефон"
+              class="form__input"
+              formControlName="phone"
+              autocomplete="off"
+              required
+            >
+					</div>
+					<div class="form__item">
+						<button type="submit" class="form__button button" [disabled]="orderForm.invalid">
+              <span *ngIf="!submitted; else orderSuccess">
+                Оформить заказ
+              </span>
+              <ng-template #orderSuccess>
+                Спасибо за заказ!
+              </ng-template>
+            </button>
+					</div>
+			</form>
+		</div>
+    <img class="footer__image" src="/assets/images/footer/pizza.png" alt="Footer image">
+  </div>
+</footer>
+
