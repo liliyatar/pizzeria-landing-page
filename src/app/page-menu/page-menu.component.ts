@@ -18,42 +18,42 @@ export class PageMenuComponent implements OnInit {
     setTimeout(() => {
       this.items = [
         {
-          image: '../assets/images/menu/01.png',
+          image: './assets/images/menu/01.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/02.png',
+          image: './assets/images/menu/02.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/03.png',
+          image: './assets/images/menu/03.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/04.png',
+          image: './assets/images/menu/04.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/05.png',
+          image: './assets/images/menu/05.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/06.png',
+          image: './assets/images/menu/06.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/07.png',
+          image: './assets/images/menu/07.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
         {
-          image: '../assets/images/menu/08.png',
+          image: './assets/images/menu/08.png',
           title: 'Мясная Делюкс',
           text: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус, чили ананасы'
         },
