@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+@use "sass:math";
+@import './assets/scss/mixins';
+
+@font-face {
+	font-family: $fontFamily;
+	src: url('./assets/fonts/MullerRegular.eot');
+	src: local('Muller Regular'), url('./assets/fonts/MullerRegular.woff') format('woff'), url('./assets/fonts/MullerRegular.ttf') format('truetype'), url('./assets/fonts/MullerRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $fontFamily;
+	src: url('./assets/fonts/MullerBold.eot');
+	src: local('Muller Bold'), url('./assets/fonts/MullerBold.woff') format('woff'), url('./assets/fonts/MullerBold.ttf') format('truetype'), url('./assets/fonts/MullerBold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $fontFamily;
+	src: url('./assets/fonts/MullerExtraBold.eot');
+	src: local('Muller ExtraBold'), url('./assets/fonts/MullerExtraBold.woff') format('woff'), url('./assets/fonts/MullerExtraBold.ttf') format('truetype'), url('./assets/fonts/MullerExtraBold.svg') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $fontFamily;
+	src: url('./assets/fonts/MullerBlack.eot');
+	src: local('Muller Black'), url('./assets/fonts/MullerBlack.woff') format('woff'), url('./assets/fonts/MullerBlack.ttf') format('truetype'), url('./assets/fonts/MullerBlack.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+body {
+	color: #000;
+	line-height: 1;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+	font-family: $fontFamily;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: transparent;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+.container {
+	max-width: $maxWidthContainer + px;
+	padding: 0 rem(math.div($containerPadding, 2));
+	margin: 0 auto;
+}
