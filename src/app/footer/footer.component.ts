@@ -27,16 +27,6 @@ export class FooterComponent {
     this.orderForm.disable();
     this.submitting = true;
 
-    console.log(this.orderForm);
-
-    const newOrder = {
-      name: this.orderForm.value.name,
-      address: this.orderForm.value.address,
-      phone: this.orderForm.value.phone,
-    }
-
-    console.log(newOrder);
-
     const completed = () => {
       this.orderForm.reset({
         name: null,
@@ -45,7 +35,7 @@ export class FooterComponent {
       });
       this.orderForm.enable();
     }
-      // fake request
+    // fake request
     this.http.get('https://jsonplaceholder.typicode.com/todos')
       .subscribe({
         next:(data) => {
